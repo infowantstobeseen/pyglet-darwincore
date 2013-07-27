@@ -1,10 +1,15 @@
-pyglet
+pyglet (Core Profile for Darwin fork)
 ======
 
 http://www.pyglet.org/
 
 pyglet provides an object-oriented programming interface for developing games
 and other visually-rich applications for Windows, Mac OS X and Linux.
+
+This version adds Core Profile (OpenGL 3.2) support on OS X (see issue 532:
+https://code.google.com/p/pyglet/issues/detail?id=532). It requires the shadow_window to be disabled to work properly 
+    
+    pyglet.options['shadow_window'] = False
 
 Requirements
 ------------
