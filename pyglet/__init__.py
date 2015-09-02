@@ -195,9 +195,8 @@ def _choose_darwin_platform():
     if numbits == 64:
         import platform
         osx_version = [int(x) for x in platform.mac_ver()[0].split('.')]
-                if osx_version[0] < 10 or (osx_version[0] >= 10 and
-                                           osx_version[1] < 6):
-                    raise Exception('pyglet is not compatible with 64-bit Python for versions of Mac OS X prior to 10.6.')
+        if osx_version[0] < 10 or (osx_version[0] >= 10 and osx_version[1] < 6):
+            raise Exception('pyglet is not compatible with 64-bit Python for versions of Mac OS X prior to 10.6.')
         options['darwin_cocoa'] = True
     else:
         options['darwin_cocoa'] = False
