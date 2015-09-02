@@ -54,7 +54,7 @@ os_x_release = {
     }
 
 def os_x_version():
-    version = tuple(platform.release().split('.'))
+    version = tuple(int(x) for x in platform.release().split('.'))
 
     # ensure we return a tuple
     if len(version) > 0:
